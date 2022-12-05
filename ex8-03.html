@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>innerHTML 활용</title>
+  <script>
+    function change() {
+      let p = document.getElementById("firstP");
+      p.innerHTML="나의 <img src='./media/cat.jpg'>고양이";
+    }
+  </script>
+</head>
+<body> <!-- **** 코딩결과, 클릭하면 고양이 사진나와야 하는데 안나옴, 다음번에 고치기-->
+  <h2>innerHTML활용<br> 아래 글자를 클릭하면 고양이가 보입니다.</h2>
+  innerHTML프로퍼티는 시작태그와 종료태그 사이에 들어있는 HTML컨텐츠를 나타내는 문자열 정보다.
+  <hr>
+  <p id="fisrtP" style="color:blue" onclick="change()">
+  여기를 <span style="color:red">클릭하세요</span>
+  </p>
+</body>
+</html>

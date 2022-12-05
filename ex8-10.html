@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML문서 작성기 만들기</title>
+  <script>
+    let win = null;
+    function showHTML() {
+      if(win == null || win.closed)
+      win = window.open("", "outWin", "width=300 height=200");
+
+      let textArea = document.getElementById("srcText");
+      win.document.open();
+      win.document.write(textArea.value);
+      win.document.closed();
+    }
+  </script>
+</head>
+<body>
+  <h2>HTML 문서 작성기 만들기</h2>
+  이 예제는 HTML 문서 작성을 연습하는 웹 페이지를 만든 사례이다. <br>
+  사용자가 HTML 문서를 키보드로 입력하고 버튼을 누르면 입력한<br>
+  HTML 문서를 새 브라우저 윈도우에 출력한다.
+  <hr>
+  <p>
+    아래에 HTML문서를 작성하고 버튼을 클릭해 보세요. <br>
+    새 윈도우에 HTML문서가 출력됩니다.
+  </p>
+  <textarea id="srcText" rows="10" cols="50"></textarea>
+  <br>
+  <br>
+  <button onclick="showHTML()">HTML 문서 출력하기</button>
+</body>
+</html>

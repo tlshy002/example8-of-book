@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>태그 이름으로 DOM 객체 찾기</title>
+  <script>
+    function change() {
+      let spanArray = document.getElementsByTagName("span"); // ()안의 태그 이름을 가진 모든 태그(DOM객체)의 컬렉션 리턴
+      for(let i=0; i<spanArray.length; i++) {
+        let span = spanArray[i];
+        span.style.color = "red";
+        span.style.fontSize = "20px";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>내가 좋아하는 과일 <button onclick="change()">누르세요</button></h2>
+  버튼을 클릭하면 웹페이지에 있는 &lt;span&gt; 태그를 모두 찾아, <br>
+  글자를 red 색에 20px 크기로 바꾸는 자바스크립트 코드
+  <hr>
+  저는 주황 <span>귤</span>을 좋아해서 겨울에는 거의 매주 한 박스씩 먹지요.<br>
+  또 겨울하면 생각나는 <span>딸기</span>는 없어서 못먹지요.<br>
+  그리고 <span>망고</span>와 <span>용과</span>는 제가 제일 <br>
+  좋아하는 열대과일이랍니다!
+</body>
+</html>
