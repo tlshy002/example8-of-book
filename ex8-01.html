@@ -1,0 +1,33 @@
+var p = document.getElementById("firstP");
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML DOM 트리</title>
+</head>
+<body>
+  <h2>DOM객체 P의 프로퍼티, 스타일, 이벤트 리스너</h2>
+  DOM 객체 P의 프로퍼티와 이벤트 리스너 그리고 CSS3 스타일 시트를 접근한 사례다. <br>
+  다음 코드는 DOM 트리에서 id속성이 "firstP"인 HTML태그(&lt;p&gt;)의 DOM객체를 찾는 JS코드다
+  <hr>
+  <p id="firstP"
+    style="color:blue; background:yellow"
+    onclick="this.style.color='teal'">
+    이것은 <span style="color:red">문장입니다.</span>
+  </p>
+  <script>
+    var p = document.getElementById("firstP");
+    var text = "p.id = " + p.id + "\n";
+    text += "p.tagName = " + p.tagName + "\n"; 
+    text += "p.innerHTML = " + p.innerHTML + "\n"; 
+    text += "p.style.color = " + p.style.color + "\n"; 
+    text += "p.onclick = " + p.onclick + "\n"; 
+    text += "p.childElementCount = " + p.childElementCount + "\n";
+    
+    alert(text);
+  </script>
+</body>
+</html>
