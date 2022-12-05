@@ -12,16 +12,15 @@
       newDIV.innerHTML = "새로 생성된 DIV입니다.";
       newDIV.setAttribute("id", "myDiv");
       newDIV.style.backgroundColor = "yellow";
-      newDIV.addEventListener("click", 
-        function() {
+      newDIV.onclick = function() {
           let p = this.parentElement; //부모 HTML태그 요소
           p.removeChild(this); //자신을 부모로부터 제거
-        });
+        };
         obj.appendChild(newDIV);
     }
   </script>
 </head>
-<body>
+<body id="parent"> <!-- 여기 body태그애 id값 넣었어야함 -->
   <h2>DIV 객체를 동적으로 생성, 삽입, 삭제하는 예제</h2>
   <hr>
   <p>
@@ -32,4 +31,4 @@
   <a href="javascript:createDIV()">DIV 생성</a><p></p>
 </body>
 </html>
-<!-- ****실행이 정상작동 안함 -->
+<!-- ****실행이 정상작동 안함 --> <!-- 해결됨!! -->
